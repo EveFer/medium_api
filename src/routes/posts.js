@@ -80,7 +80,7 @@ ROUTER.delete('/:id', async (req, res) => {
   }
 })
 
-ROUTER.put('/:id', authMiddleware, async (req, res) => {
+ROUTER.put('/:id', async (req, res) => {
   try {
     const { id } = req.params
     const postUpdated = await posts.updateById(id, req.body)

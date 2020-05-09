@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 
 function connect () {
-  return mongoose.connect('mongodb+srv://devfernanda:kodemia123@tester-fqndx.mongodb.net/medium?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true })
+  return mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false })
 }
 
 module.exports = { connect }

@@ -5,7 +5,7 @@ function create (postData) {
 }
 
 function getAll () {
-  return Post.find().sort('publication_date')
+  return Post.find().sort({ publication_date: -1 })
 }
 
 function getAPost (id) {
