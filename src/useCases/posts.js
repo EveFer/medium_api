@@ -14,7 +14,8 @@ function getAll () {
       description: 1,
       publication_date: 1,
       estimated_time: 1,
-      image: 1
+      image: 1,
+      tag: 1
     })
 }
 

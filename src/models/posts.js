@@ -9,20 +9,24 @@ const schemaPost = new mongoose.Schema({
   title: {
     type: String,
     required: true,
-    minlength: 10
-  },
-  subtitle: {
-    type: String,
-    required: true
+    minlength: 10,
+    trim: true
   },
   author: {
     type: String,
-    required: true
+    required: true,
+    trim: true
   },
   description: {
     type: String,
     required: true,
-    minlength: 20
+    minlength: 20,
+    trim: true
+  },
+  content: {
+    type: String,
+    required: true,
+    trim: true
   },
   publication_date: {
     type: Date,
@@ -30,19 +34,23 @@ const schemaPost = new mongoose.Schema({
   },
   estimated_time: {
     type: String,
-    required: true
+    required: true,
+    trim: true
   },
   image: {
     type: String,
-    required: true
+    required: true,
+    trim: true
   },
   tag: {
     type: String,
-    required: true
+    required: true,
+    trim: true
   },
   imgDetail: {
     type: String,
-    required: true
+    required: true,
+    trim: true
   }
 })
 
