@@ -5,7 +5,17 @@ function create (postData) {
 }
 
 function getAll () {
-  return Post.find().sort({ publication_date: -1 })
+  return Post.find()
+    .sort({ publication_date: -1 })
+    .select({
+      category: 1,
+      title: 1,
+      author: 1,
+      description: 1,
+      publication_date: 1,
+      estimated_time: 1,
+      image: 1
+    })
 }
 
 function getAPost (id) {

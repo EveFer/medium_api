@@ -21,7 +21,7 @@ ROUTER.get('/', async (req, res) => {
     res.status(400)
     res.json({
       success: false,
-      errors: error.message
+      data: error.message
     })
   }
 })
@@ -40,7 +40,7 @@ ROUTER.get('/:id', async (req, res) => {
     res.status(400)
     res.json({
       success: false,
-      errors: error.message
+      data: error.message
     })
   }
 })
@@ -58,7 +58,7 @@ ROUTER.post('/', async (req, res) => {
     res.status(400)
     res.json({
       success: false,
-      errors: errors.errorsHandling(error)
+      data: errors.errorsHandling(error)
     })
   }
 })
@@ -75,7 +75,7 @@ ROUTER.delete('/:id', async (req, res) => {
     res.status(400)
     res.json({
       success: false,
-      error: error.message
+      data: error.message
     })
   }
 })
@@ -95,7 +95,7 @@ ROUTER.put('/:id', async (req, res) => {
     res.status(400)
     res.json({
       success: false,
-      error: error.message
+      data: error.message
     })
   }
 })

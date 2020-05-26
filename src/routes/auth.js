@@ -18,7 +18,7 @@ ROUTER.post('/login', async (req, res) => {
     res.status(400)
     res.json({
       success: false,
-      error: error.message
+      data: error.message
     })
   }
 })

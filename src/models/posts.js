@@ -11,7 +11,11 @@ const schemaPost = new mongoose.Schema({
     required: true,
     minlength: 10
   },
-  autor: {
+  subtitle: {
+    type: String,
+    required: true
+  },
+  author: {
     type: String,
     required: true
   },
@@ -33,6 +37,10 @@ const schemaPost = new mongoose.Schema({
     required: true
   },
   tag: {
+    type: String,
+    required: true
+  },
+  imgDetail: {
     type: String,
     required: true
   }

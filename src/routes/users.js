@@ -18,7 +18,7 @@ ROUTER.post('/signup', async (req, res) => {
     res.status(400)
     res.json({
       success: false,
-      errors: error.message
+      data: error.message
     })
   }
 })
@@ -36,7 +36,7 @@ ROUTER.get('/', authMiddleware, async (req, res) => {
     res.status(400)
     res.json({
       success: false,
-      errors: error.message
+      data: error.message
     })
   }
 })
@@ -55,7 +55,7 @@ ROUTER.get('/:id', authMiddleware, async (req, res) => {
     res.status(400)
     res.json({
       success: false,
-      errors: error.message
+      data: error.message
     })
   }
 })
@@ -72,7 +72,7 @@ ROUTER.delete('/:id', authMiddleware, async (req, res) => {
     res.status(400)
     res.json({
       success: false,
-      error: error.message
+      data: error.message
     })
   }
 })
@@ -92,7 +92,7 @@ ROUTER.patch('/:id', authMiddleware, async (req, res) => {
     res.status(400)
     res.json({
       success: false,
-      error: error.message
+      data: error.message
     })
   }
 })
